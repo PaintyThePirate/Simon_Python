@@ -110,17 +110,17 @@ class pymon():
         else:
             s_incorrect.play()
             pymon.has_played = True
-            reset_game()
+            pymon.reset_game()
 
     #Returns values to their original position; Records new high score if there is one.
-        def reset_game():
-            pymon.game_array = []
-            if pymon.high_score < pymon.score:
-                pymon.high_score = pymon.score
-            pymon.score = 0
-            pymon.game_active = False
-            pymon.waiting_for_input = False
-            pymon.current_check = 0
+    def reset_game():
+        pymon.game_array = []
+        if pymon.high_score < pymon.score:
+            pymon.high_score = pymon.score
+        pymon.score = 0
+        pymon.game_active = False
+        pymon.waiting_for_input = False
+        pymon.current_check = 0
 
 
 #Main Game Loop
